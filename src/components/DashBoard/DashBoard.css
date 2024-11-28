@@ -1,0 +1,159 @@
+.dashContainer {
+  display: flex;
+  align-items: flex-start;
+  padding: 3% 2% 1.5% 2%;
+  flex-wrap: wrap;
+  background-color: #f4f5f8;
+  background-position: center;
+  min-height: 100vh;
+  gap: 20px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashCardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;   /* Make the container take full width */
+  max-width: 350px;  /* Ensures consistent card width */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;  /* Consistent padding for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 250px;  /* Ensures minimum height for uniformity */
+}
+
+.dashCardContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dashCardHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.dashCardHeading .title {
+  color: #2a2a2a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dashCardHeading .action {
+  color: #007bff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.dashCardHeading .action:hover {
+  color: #0056b3;
+}
+
+.dashList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .dashCardContainer {
+    width: 48%;  /* Two cards per row for medium screens */
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dashCardContainer {
+    width: 48%;  /* Two cards per row */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dashCardContainer {
+    width: 45%;  /* Adjust width to fit 3 cards per row */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dashCardContainer {
+    width: 100%;  /* Full width on smaller screens */
+  }
+
+  .dashCardHeading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .dashCardHeading .title {
+    font-size: 16px;
+  }
+
+  .dashCardHeading .action {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dashCardContainer {
+    width: 100%;
+    margin-bottom: 15px;  /* Add margin between cards */
+  }
+
+  .dashCardHeading .title {
+    font-size: 14px;
+  }
+
+  .dashCardHeading .action {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .dashCardContainer {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .dashCardHeading .title {
+    font-size: 12px;
+  }
+
+  .dashCardHeading .action {
+    font-size: 10px;
+  }
+
+  .dashContainer {
+    padding: 2% 1%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .dashCardContainer {
+    padding: 10px;
+  }
+
+  .dashCardHeading .title {
+    font-size: 12px;
+  }
+
+  .dashCardHeading .action {
+    font-size: 10px;
+  }
+
+  .dashContainer {
+    padding: 2% 1%;
+  }
+}

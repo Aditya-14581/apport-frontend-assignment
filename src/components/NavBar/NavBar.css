@@ -1,0 +1,148 @@
+.selectGroup {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    gap: 10px;
+}
+
+.displayButton {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropOnClick {
+    position: absolute;
+    width: 220px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-top: 12px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.dropOnClick > * {
+    width: 100%;
+}
+
+.btn {
+    background: #ffffff;
+    border: 2px solid #c1c1c1;
+    border-radius: 5px;
+    padding: 8px 18px;
+    font-weight: 600;
+    color: #333;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-align: center;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background: #f5f5f5;
+    border-color: #888;
+}
+
+.selectStyle {
+    width: 130px;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #333;
+    transition: border 0.3s ease;
+    box-sizing: border-box;
+}
+
+.selectStyle:focus {
+    border: 1px solid #4fa94d;
+    outline: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .dropOnClick {
+        width: 100%;
+        max-width: 95%;
+        margin-top: 10px;
+    }
+
+    .selectGroup {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+
+    .selectStyle {
+        width: 100%;
+        padding: 5px 12px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dropOnClick {
+        width: 100%;
+        max-width: 95%;
+        margin-top: 10px;
+    }
+
+    .selectGroup {
+        padding: 8px;
+        gap: 6px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    .selectStyle {
+        width: 100%;
+        padding: 4px 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .dropOnClick {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 8px;
+    }
+
+    .selectGroup {
+        padding: 6px;
+        gap: 5px;
+    }
+
+    .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .selectStyle {
+        width: 100%;
+        padding: 4px 8px;
+    }
+}
+
+
+.displayButton button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.displayButton button svg {
+  font-size: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.displayButton button:hover svg {
+  transform: rotate(180deg);
+}
